@@ -32,7 +32,7 @@ module.exports = {
     "import/resolver": {
       node: {
         paths: ["."],
-        extensions: [".mjs", ".json", ".js", ".ts", ".d.ts"],
+        extensions: [".mjs", ".json", ".js", ".ts", ".tsx", ".d.ts"],
       }
     },
     react: {
