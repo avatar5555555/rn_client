@@ -34,12 +34,21 @@ target 'rn_client' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
+
+
+
+
+  pod 'lottie-react-native', :path => '../node_modules/lottie-react-native'
+
+  pod 'lottie-ios', :path => '../node_modules/lottie-ios'
+
   target 'rn_clientTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
   use_native_modules!
+  use_frameworks!
 end
 
 target 'rn_client-tvOS' do

@@ -18,8 +18,8 @@
 		2DCD954D1E0B4F2C00145EB5 /* rn_clientTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* rn_clientTests.m */; };
 		3EF83079DFB249A210666B99 /* libPods-rn_client-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 57F4E8E30249DC10DB7F86A7 /* libPods-rn_client-tvOS.a */; };
 		AE3B7192538AFAD4324813DB /* libPods-rn_client-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 76D8B36D43F1BD75180F2C50 /* libPods-rn_client-tvOSTests.a */; };
-		D2730992902385B68AC54890 /* libPods-rn_client.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EB7B1C0425AEAFC6FDE3EEC /* libPods-rn_client.a */; };
-		FF79D8F5D7DE2F997E941DA2 /* libPods-rn_clientTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 890BA3F3D737B859B145DFF1 /* libPods-rn_clientTests.a */; };
+		D6A91B1BE34B475EF7FFC640 /* Pods_rn_client.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 87296712626C94DAE22562A7 /* Pods_rn_client.framework */; };
+		DEFC8D304DF0C080357884A7 /* Pods_rn_clientTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 52B99B51280114DE15C91702 /* Pods_rn_clientTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +29,41 @@
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = rn_client;
+		};
+		095058F7241CCAFC00525168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095058EF241CCAFC00525168 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 486E83B2220A317C007CD915;
+			remoteInfo = Lottie_iOS;
+		};
+		095058F9241CCAFC00525168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095058EF241CCAFC00525168 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 486E84E2220A357D007CD915;
+			remoteInfo = Lottie_tvOS;
+		};
+		095058FB241CCAFC00525168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095058EF241CCAFC00525168 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 486E8567220A3605007CD915;
+			remoteInfo = Lottie_macOS;
+		};
+		095058FD241CCAFC00525168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095058EF241CCAFC00525168 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 486E85F3220A36F6007CD915;
+			remoteInfo = LottieLibraryIOS;
+		};
+		095058FF241CCAFC00525168 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 095058EF241CCAFC00525168 /* Lottie.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 486E8675220A3751007CD915;
+			remoteInfo = LottieLibraryMacOS;
 		};
 		2D02E4911E0B4A5D006451C7 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -44,6 +79,9 @@
 		00E356EE1AD99517003FC87E /* rn_clientTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = rn_clientTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* rn_clientTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = rn_clientTests.m; sourceTree = "<group>"; };
+		095058EB241CC9E300525168 /* liblottie-ios.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "liblottie-ios.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		095058EC241CC9E300525168 /* liblottie-react-native.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = "liblottie-react-native.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		095058EF241CCAFC00525168 /* Lottie.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Lottie.xcodeproj; path = "../node_modules/lottie-ios/Lottie.xcodeproj"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* rn_client.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = rn_client.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = rn_client/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = rn_client/AppDelegate.m; sourceTree = "<group>"; };
@@ -54,13 +92,13 @@
 		2D02E47B1E0B4A5D006451C7 /* rn_client-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "rn_client-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* rn_client-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "rn_client-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3FE4B3B172A05D69DE5EEC90 /* Pods-rn_client.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_client.release.xcconfig"; path = "Target Support Files/Pods-rn_client/Pods-rn_client.release.xcconfig"; sourceTree = "<group>"; };
-		4EB7B1C0425AEAFC6FDE3EEC /* libPods-rn_client.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_client.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52B99B51280114DE15C91702 /* Pods_rn_clientTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rn_clientTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		57F4E8E30249DC10DB7F86A7 /* libPods-rn_client-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_client-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		5B8601DFE66430D8A6618201 /* Pods-rn_client-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_client-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-rn_client-tvOSTests/Pods-rn_client-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCBDF0CD82FB265EA7C6ACB /* Pods-rn_client-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_client-tvOS.release.xcconfig"; path = "Target Support Files/Pods-rn_client-tvOS/Pods-rn_client-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		76D8B36D43F1BD75180F2C50 /* libPods-rn_client-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_client-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BF24C99F68CDD6A51592492 /* Pods-rn_client.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_client.debug.xcconfig"; path = "Target Support Files/Pods-rn_client/Pods-rn_client.debug.xcconfig"; sourceTree = "<group>"; };
-		890BA3F3D737B859B145DFF1 /* libPods-rn_clientTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-rn_clientTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		87296712626C94DAE22562A7 /* Pods_rn_client.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rn_client.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		90763BE195339A7AD5593E6E /* Pods-rn_client-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_client-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-rn_client-tvOS/Pods-rn_client-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
 		B6F52C504AE842DBF08F9D8E /* Pods-rn_clientTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rn_clientTests.release.xcconfig"; path = "Target Support Files/Pods-rn_clientTests/Pods-rn_clientTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -74,7 +112,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FF79D8F5D7DE2F997E941DA2 /* libPods-rn_clientTests.a in Frameworks */,
+				DEFC8D304DF0C080357884A7 /* Pods_rn_clientTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -82,7 +120,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D2730992902385B68AC54890 /* libPods-rn_client.a in Frameworks */,
+				D6A91B1BE34B475EF7FFC640 /* Pods_rn_client.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -122,6 +160,18 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		095058F0241CCAFC00525168 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				095058F8241CCAFC00525168 /* Lottie.framework */,
+				095058FA241CCAFC00525168 /* Lottie.framework */,
+				095058FC241CCAFC00525168 /* Lottie.framework */,
+				095058FE241CCAFC00525168 /* libLottie.a */,
+				09505900241CCAFC00525168 /* libLottie.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		0FE753CE9879DA7ED6E8467B /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -134,7 +184,6 @@
 				F3E97B1E28537EDAEDB1ECBE /* Pods-rn_clientTests.debug.xcconfig */,
 				B6F52C504AE842DBF08F9D8E /* Pods-rn_clientTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -155,12 +204,15 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				095058EF241CCAFC00525168 /* Lottie.xcodeproj */,
+				095058EB241CC9E300525168 /* liblottie-ios.a */,
+				095058EC241CC9E300525168 /* liblottie-react-native.a */,
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
 				ED2971642150620600B7C4FE /* JavaScriptCore.framework */,
-				4EB7B1C0425AEAFC6FDE3EEC /* libPods-rn_client.a */,
 				57F4E8E30249DC10DB7F86A7 /* libPods-rn_client-tvOS.a */,
 				76D8B36D43F1BD75180F2C50 /* libPods-rn_client-tvOSTests.a */,
-				890BA3F3D737B859B145DFF1 /* libPods-rn_clientTests.a */,
+				87296712626C94DAE22562A7 /* Pods_rn_client.framework */,
+				52B99B51280114DE15C91702 /* Pods_rn_clientTests.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -230,6 +282,7 @@
 				13B07F8C1A680F5B00A75B9A /* Frameworks */,
 				13B07F8E1A680F5B00A75B9A /* Resources */,
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
+				FE03FFBF5B06B800C9CCB848 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -308,12 +361,19 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
 			mainGroup = 83CBB9F61A601CBA00E9B192;
 			productRefGroup = 83CBBA001A601CBA00E9B192 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = 095058F0241CCAFC00525168 /* Products */;
+					ProjectRef = 095058EF241CCAFC00525168 /* Lottie.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				13B07F861A680F5B00A75B9A /* rn_client */,
@@ -323,6 +383,44 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		095058F8241CCAFC00525168 /* Lottie.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Lottie.framework;
+			remoteRef = 095058F7241CCAFC00525168 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		095058FA241CCAFC00525168 /* Lottie.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Lottie.framework;
+			remoteRef = 095058F9241CCAFC00525168 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		095058FC241CCAFC00525168 /* Lottie.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Lottie.framework;
+			remoteRef = 095058FB241CCAFC00525168 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		095058FE241CCAFC00525168 /* libLottie.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLottie.a;
+			remoteRef = 095058FD241CCAFC00525168 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		09505900241CCAFC00525168 /* libLottie.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = libLottie.a;
+			remoteRef = 095058FF241CCAFC00525168 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		00E356EC1AD99517003FC87E /* Resources */ = {
@@ -511,6 +609,70 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "export RCT_METRO_PORT=\"${RCT_METRO_PORT:=8081}\"\necho \"export RCT_METRO_PORT=${RCT_METRO_PORT}\" > \"${SRCROOT}/../node_modules/react-native/scripts/.packager.env\"\nif [ -z \"${RCT_NO_LAUNCH_PACKAGER+xxx}\" ] ; then\n  if nc -w 5 -z localhost ${RCT_METRO_PORT} ; then\n    if ! curl -s \"http://localhost:${RCT_METRO_PORT}/status\" | grep -q \"packager-status:running\" ; then\n      echo \"Port ${RCT_METRO_PORT} already in use, packager is either not running or not running correctly\"\n      exit 2\n    fi\n  else\n    open \"$SRCROOT/../node_modules/react-native/scripts/launchPackager.command\" || echo \"Can't start packager automatically\"\n  fi\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE03FFBF5B06B800C9CCB848 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-rn_client/Pods-rn_client-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/DoubleConversion/DoubleConversion.framework",
+				"${BUILT_PRODUCTS_DIR}/FBReactNativeSpec/FBReactNativeSpec.framework",
+				"${BUILT_PRODUCTS_DIR}/Folly/folly.framework",
+				"${BUILT_PRODUCTS_DIR}/RCTTypeSafety/RCTTypeSafety.framework",
+				"${BUILT_PRODUCTS_DIR}/React-Core/React.framework",
+				"${BUILT_PRODUCTS_DIR}/React-CoreModules/CoreModules.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTActionSheet/RCTActionSheet.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTAnimation/RCTAnimation.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTBlob/RCTBlob.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTImage/RCTImage.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTLinking/RCTLinking.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTNetwork/RCTNetwork.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTSettings/RCTSettings.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTText/RCTText.framework",
+				"${BUILT_PRODUCTS_DIR}/React-RCTVibration/RCTVibration.framework",
+				"${BUILT_PRODUCTS_DIR}/React-cxxreact/cxxreact.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsi/jsi.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsiexecutor/jsireact.framework",
+				"${BUILT_PRODUCTS_DIR}/React-jsinspector/jsinspector.framework",
+				"${BUILT_PRODUCTS_DIR}/ReactCommon/ReactCommon.framework",
+				"${BUILT_PRODUCTS_DIR}/Yoga/yoga.framework",
+				"${BUILT_PRODUCTS_DIR}/glog/glog.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-ios/Lottie.framework",
+				"${BUILT_PRODUCTS_DIR}/lottie-react-native/lottie_react_native.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/DoubleConversion.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBReactNativeSpec.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/folly.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTTypeSafety.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/React.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CoreModules.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTActionSheet.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTAnimation.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTBlob.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTImage.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTLinking.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTNetwork.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTSettings.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTText.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RCTVibration.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/cxxreact.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsi.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsireact.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/jsinspector.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ReactCommon.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/yoga.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/glog.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Lottie.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/lottie_react_native.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-rn_client/Pods-rn_client-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
