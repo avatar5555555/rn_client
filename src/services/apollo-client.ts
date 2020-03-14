@@ -1,9 +1,30 @@
 import { ApolloClient } from "apollo-client";
 import { API } from "react-native-dotenv";
 import { InMemoryCache } from "apollo-cache-inmemory";
-import { HttpLink } from "apollo-link-http";
+import { createHttpLink } from "apollo-link-http";
 import { onError } from "apollo-link-error";
 import { ApolloLink } from "apollo-link";
+import { setContext } from "apollo-link-context";
+
+import { authStorage } from "./auth-storage";
+
+const httpLink = createHttpLink({
+  uri: API,
+  credentials: "same-origin",
+});
+
+const authLink = setContext(async (_, { headers }) => {
+  // get the authentication token from local storage if it exists
+  const token = await authStorage.getToken();
+
+  // return the headers to the context so httpLink can read them
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
 
 export const client = new ApolloClient({
   link: ApolloLink.from([
@@ -20,10 +41,7 @@ export const client = new ApolloClient({
         console.log(`[Network error]: ${networkError}`);
       }
     }),
-    new HttpLink({
-      uri: API,
-      credentials: "same-origin",
-    }),
+    authLink.concat(httpLink),
   ]),
   cache: new InMemoryCache(),
 });

@@ -1,0 +1,12 @@
+schema: http://gql-load-balancer-108251365.us-east-2.elb.amazonaws.com
+documents: src/**/*.query.ts
+generates:
+  ./src/types.tsx:
+    plugins:
+      - typescript
+      - typescript-operations
+      - typescript-react-apollo
+    config:
+      withHooks: true
+      withComponent: false
+      withHOC: false
