@@ -1,19 +1,13 @@
-import React, { Fragment } from "react";
-import { StatusBar } from "react-native";
+import React from "react";
 import LottieView from "lottie-react-native";
-import styled from "styled-components/native";
+import { ApolloProvider } from "@apollo/react-hooks";
 
-const View = styled.View`
-  flex-basis: 100%;
-`;
+import { client } from "src/services/apollo-client";
 
 export const App = () => {
   return (
-    <Fragment>
-      <StatusBar barStyle="dark-content" />
-      <View>
-        <LottieView autoPlay source={require("./loader.json")} />
-      </View>
-    </Fragment>
+    <ApolloProvider client={client}>
+      <LottieView autoPlay source={require("./loader.json")} />
+    </ApolloProvider>
   );
 };
