@@ -17,7 +17,7 @@ const Root = () => {
   const { loading } = useMeQuery();
 
   if (loading) {
-    <LottieView autoPlay source={require("./loader.json")} />;
+    return <LottieView autoPlay source={require("./loader.json")} />;
   }
 
   return (
