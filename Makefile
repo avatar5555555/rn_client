@@ -1,10 +1,10 @@
 .PHONY: ios gen intl
 
 ios:
-	yarn ios
+	@yarn ios
 
 gen:
-	yarn generate
+	@yarn generate
 
 intl:
-	yarn extract:i18n
+	@yarn extract:i18n

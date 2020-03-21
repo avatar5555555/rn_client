@@ -1,21 +1,22 @@
-import { ApolloClient } from "apollo-client";
-import { API } from "react-native-dotenv";
-import { InMemoryCache } from "apollo-cache-inmemory";
-import { createHttpLink } from "apollo-link-http";
-import { onError } from "apollo-link-error";
-import { ApolloLink } from "apollo-link";
-import { setContext } from "apollo-link-context";
+import { ApolloClient } from "apollo-client"
+import { InMemoryCache } from "apollo-cache-inmemory"
+import { createHttpLink } from "apollo-link-http"
+import { onError } from "apollo-link-error"
+import { ApolloLink } from "apollo-link"
+import { setContext } from "apollo-link-context"
 
-import { authStorage } from "./auth-storage";
+import { authStorage } from "./auth-storage"
+
+import { API_URL } from "src/config"
 
 const httpLink = createHttpLink({
-  uri: API,
+  uri: API_URL,
   credentials: "same-origin",
-});
+})
 
 const authLink = setContext(async (_, { headers }) => {
   // get the authentication token from local storage if it exists
-  const token = await authStorage.getToken();
+  const token = await authStorage.getToken()
 
   // return the headers to the context so httpLink can read them
   return {
@@ -23,8 +24,8 @@ const authLink = setContext(async (_, { headers }) => {
       ...headers,
       authorization: token ? `Bearer ${token}` : "",
     },
-  };
-});
+  }
+})
 
 export const client = new ApolloClient({
   link: ApolloLink.from([
@@ -34,14 +35,14 @@ export const client = new ApolloClient({
           console.log(
             `[GraphQL error]: Message: ${message}, Location: ${locations}, Path: ${path}`,
           ),
-        );
+        )
       }
 
       if (networkError) {
-        console.log(`[Network error]: ${networkError}`);
+        console.log(`[Network error]: ${networkError}`)
       }
     }),
     authLink.concat(httpLink),
   ]),
   cache: new InMemoryCache(),
-});
+})

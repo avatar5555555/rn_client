@@ -51,7 +51,6 @@ module.exports = {
   rules: {
     "formatjs/no-offset": "error",
     "formatjs/enforce-default-message": "error",
-    "prettier/prettier": "error",
     "no-dupe-keys": "error",
     "no-unused-vars": ["warn", "all"],
     curly: "error",
@@ -90,7 +89,8 @@ module.exports = {
         trailingComma: "all",
         singleQuote: false,
         arrowParens: "always",
-        parser: "typescript"
+        parser: "typescript",
+        semi: false
       }
     ],
 
