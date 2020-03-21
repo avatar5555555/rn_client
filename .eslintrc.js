@@ -4,11 +4,16 @@ module.exports = {
     node: true,
   },
   extends: [
-    "plugin:prettier/recommended",
     "plugin:import/errors",
     "plugin:import/warnings",
     "plugin:import/typescript",
-    "plugin:react/recommended"
+    "plugin:react/recommended",
+    "plugin:promise/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "prettier/react",
+    "prettier"
   ],
   globals: {
     Atomics: "readonly",
@@ -19,7 +24,8 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: "module",
     ecmaFeatures: {
-      modules: true
+      modules: true,
+      jsx: true
     }
   },
   plugins: [
@@ -27,6 +33,9 @@ module.exports = {
     "prettier",
     "import",
     "promise",
+    "formatjs",
+    "react",
+    "react-hooks",
   ],
   settings: {
     "import/resolver": {
@@ -40,6 +49,8 @@ module.exports = {
     }
   },
   rules: {
+    "formatjs/no-offset": "error",
+    "formatjs/enforce-default-message": "error",
     "prettier/prettier": "error",
     "no-dupe-keys": "error",
     "no-unused-vars": ["warn", "all"],
@@ -90,6 +101,15 @@ module.exports = {
     // react
     "react/jsx-wrap-multilines": ["error", { "declaration": false, "assignment": false }],
     "react/jsx-fragments": ["error", "element"],
+    "react/self-closing-comp": ["error", {
+      component: true,
+      html: true
+    }],
+    "react/jsx-sort-props": ["error", {
+      shorthandFirst: true,
+      noSortAlphabetically: true
+    }],
+
   },
 
   // HACK https://github.com/typescript-eslint/typescript-eslint/issues/46
