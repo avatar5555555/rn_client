@@ -1,6 +1,7 @@
 import React from "react"
 import { useField } from "formik"
 import { TextInput, View, Text } from "react-native"
+import { useIntl } from "react-intl"
 
 import { border } from "./theme/border"
 import { color } from "./theme/color"
@@ -42,13 +43,21 @@ const LabelRoot = styled(View)`
   justify-content: space-between;
 `
 
+const Error = styled(Text)`
+  font-family: ${({ theme }) => theme.MontserratMedium};
+  font-size: ${scale(12)}px;
+  color: ${({ theme }) => theme.colors.primary};
+  height: ${scale(20)}px;
+`
+
 export const TextField = ({
   name,
   label,
   children,
   isBackgroundDark,
 }: FieldProps) => {
-  const [{ value, onBlur }, meta, { setValue }] = useField(name)
+  const [field, meta] = useField(name)
+  const intl = useIntl()
 
   const hasError = meta.touched && Boolean(meta.error)
 
@@ -61,10 +70,14 @@ export const TextField = ({
 
       <Input
         hasError={hasError}
-        onBlur={onBlur}
-        onChangeText={setValue}
-        value={value}
+        onBlur={field.onBlur(name)}
+        onChangeText={field.onChange(name)}
+        value={field.value}
       />
+
+      <Error>
+        {hasError && intl.formatMessage({ id: meta.error, defaultMessage: "" })}
+      </Error>
     </Root>
   )
 }
