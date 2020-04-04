@@ -5,4 +5,5 @@ const TOKEN = "token"
 export const authStorage = {
   getToken: () => AsyncStorage.getItem(TOKEN),
   setToken: (token: string) => AsyncStorage.setItem(TOKEN, token),
+  removeToken: () => AsyncStorage.removeItem(TOKEN),
 }
