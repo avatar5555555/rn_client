@@ -9,7 +9,7 @@
     "test": "jest",
     "lint": "eslint . --ext .js,.jsx,.ts,.tsx",
     "generate": "graphql-codegen",
-    "extract:i18n": "formatjs extract src/*/**.{ts,tsx} --out-file i18n/en.json"
+    "extract:i18n": "formatjs extract src/**/*.{ts,tsx} --out-file i18n/en.json"
   },
   "dependencies": {
     "@apollo/react-hooks": "^3.1.4",

@@ -1,14 +1,38 @@
 [
   {
+    "id": "signUp.title",
+    "defaultMessage": "Sign up"
+  },
+  {
+    "id": "signUp.passwordLabel",
+    "defaultMessage": "Password"
+  },
+  {
+    "id": "signUp.emailLabel",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "signUp.shortPassword",
+    "defaultMessage": "Short password"
+  },
+  {
+    "id": "signUp.longPassword",
+    "defaultMessage": "Long password"
+  },
+  {
+    "id": "sharedErrors.required",
+    "defaultMessage": "Required"
+  },
+  {
+    "id": "sharedErrors.invalid",
+    "defaultMessage": "Invalid"
+  },
+  {
     "id": "f",
     "defaultMessage": "aa"
   },
   {
     "id": "ff",
     "defaultMessage": "s"
-  },
-  {
-    "id": "blaaaa",
-    "defaultMessage": "booooodfdf"
   }
 ]
