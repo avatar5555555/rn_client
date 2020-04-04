@@ -1,21 +1,12 @@
 import React, { useCallback } from "react"
 import { SafeAreaView, Button, Text, View } from "react-native"
 import { useNavigation } from "@react-navigation/native"
-import { useIntl, defineMessages } from "react-intl"
+import { useApolloClient } from "@apollo/react-hooks"
 
 import styled, { scale } from "src/ui/theme"
 import { Route } from "src/route"
-
-const i18n = defineMessages({
-  f: {
-    defaultMessage: "aa",
-    id: "f",
-  },
-  d: {
-    id: "ff",
-    defaultMessage: "s",
-  },
-})
+import { useMeQuery } from "src/types"
+import { authStorage } from "src/services/auth-storage"
 
 const Root = styled(View)`
   flex-basis: 100%;
@@ -25,17 +16,25 @@ const Root = styled(View)`
 
 export const Home = () => {
   const navigation = useNavigation()
-  const intl = useIntl()
+  const apolloClient = useApolloClient()
+
+  const { data } = useMeQuery()
 
   const handleClick = useCallback(() => {
     navigation.navigate(Route.SignUp)
   }, [])
 
+  const handleLogout = useCallback(async () => {
+    await authStorage.removeToken()
+    apolloClient.resetStore()
+  }, [])
+
   return (
     <SafeAreaView>
       <Root>
-        <Text>{intl.formatMessage(i18n.f)}</Text>
+        <Text>{JSON.stringify(data)}</Text>
         <Button onPress={handleClick} title="sign up" />
+        <Button onPress={handleLogout} title="log out" />
       </Root>
     </SafeAreaView>
   )
