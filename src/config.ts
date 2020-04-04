@@ -14,3 +14,7 @@ export const pixelRatio = PixelRatio.get()
 
 // Configurable
 export const API_URL = API
+
+// Password requirements
+export const minPasswordLength = 5
+export const maxPasswordLength = 15

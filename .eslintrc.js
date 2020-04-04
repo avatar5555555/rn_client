@@ -81,6 +81,8 @@ module.exports = {
     "import/newline-after-import": "warn",
     "import/no-anonymous-default-export": "warn",
     "import/no-default-export": "error",
+    "import/named": "off",
+    "import/namespace": "off",
 
     // prettier
     "prettier/prettier": [

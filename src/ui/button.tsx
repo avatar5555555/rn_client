@@ -1,11 +1,13 @@
 import React from "react"
-import { TouchableOpacity, Text } from "react-native"
+import { TouchableOpacity, Text, ActivityIndicator } from "react-native"
 
 import styled, { scale } from "./theme"
 
 interface ButtonProps {
   label: string
   onPress: () => void
+  disabled?: boolean
+  loading?: boolean
 }
 
 export const Root = styled(TouchableOpacity).attrs(() => ({
@@ -25,10 +27,15 @@ const Label = styled(Text)`
   font-size: ${scale(14)}px;
 `
 
-export const Button = ({ label, onPress }: ButtonProps) => {
+const Spinner = styled(ActivityIndicator)`
+  color: ${({ theme }) => theme.colors.white};
+`
+
+export const Button = ({ label, onPress, disabled, loading }: ButtonProps) => {
   return (
-    <Root onPress={onPress}>
-      <Label>{label}</Label>
+    <Root onPress={onPress} disabled={disabled}>
+      {loading && <Spinner />}
+      {!loading && <Label>{label}</Label>}
     </Root>
   )
 }
