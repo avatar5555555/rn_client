@@ -43,7 +43,7 @@ const LabelRoot = styled(View)`
   justify-content: space-between;
 `
 
-const Error = styled(Text)`
+const ErrorLabel = styled(Text)`
   font-family: ${({ theme }) => theme.MontserratMedium};
   font-size: ${scale(12)}px;
   color: ${({ theme }) => theme.colors.primary};
@@ -75,9 +75,9 @@ export const TextField = ({
         value={field.value}
       />
 
-      <Error>
+      <ErrorLabel>
         {hasError && intl.formatMessage({ id: meta.error, defaultMessage: "" })}
-      </Error>
+      </ErrorLabel>
     </Root>
   )
 }
