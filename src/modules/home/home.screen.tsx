@@ -22,18 +22,23 @@ export const Home = () => {
 
   const handleClick = useCallback(() => {
     navigation.navigate(Route.SignUp)
-  }, [])
+  }, [navigation])
 
   const handleLogout = useCallback(async () => {
     await authStorage.removeToken()
     apolloClient.resetStore()
-  }, [])
+  }, [apolloClient])
+
+  const handleConfirm = useCallback(async () => {
+    navigation.navigate(Route.ConfirmEmail, { email: "sdsd@a.dd" })
+  }, [navigation])
 
   return (
     <SafeAreaView>
       <Root>
         <Text>{JSON.stringify(data)}</Text>
         <Button onPress={handleClick} title="sign up" />
+        <Button onPress={handleConfirm} title="confirm email" />
         <Button onPress={handleLogout} title="log out" />
       </Root>
     </SafeAreaView>

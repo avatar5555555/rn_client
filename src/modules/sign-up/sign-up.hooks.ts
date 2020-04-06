@@ -6,14 +6,13 @@ import { FormikHelpers } from "formik"
 
 import { SignUpFormValues, errors } from "./sign-up.schema"
 
-import { useRegisterMutation } from "src/types"
+import { useSignUpMutation } from "src/types"
 import { Route } from "src/route"
-import { authStorage } from "src/services/auth-storage"
 import { sharedErrors } from "src/shared-schema"
 
 export const useSubmit = () => {
   const intl = useIntl()
-  const [handleRegistration] = useRegisterMutation()
+  const [handleRegistration] = useSignUpMutation()
   const navigation = useNavigation()
 
   return useCallback(
@@ -22,13 +21,9 @@ export const useSubmit = () => {
       formikHelpers: FormikHelpers<SignUpFormValues>,
     ) => {
       try {
-        const { data } = await handleRegistration({ variables: values })
-        const token = data?.register?.token
+        await handleRegistration({ variables: values })
 
-        if (token) {
-          authStorage.setToken(token)
-          navigation.navigate(Route.Home)
-        }
+        navigation.navigate(Route.ConfirmEmail, { email: values.email })
       } catch (error) {
         Alert.alert(
           intl.formatMessage(sharedErrors.errorTitle),
@@ -37,6 +32,6 @@ export const useSubmit = () => {
         formikHelpers.resetForm()
       }
     },
-    [],
+    [handleRegistration, intl, navigation],
   )
 }

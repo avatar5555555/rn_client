@@ -12,6 +12,7 @@ import { Route } from "src/route"
 import { useMeQuery } from "src/types"
 import { IntlService } from "src/services/intl"
 import { ThemeProvider, theme } from "src/ui/theme"
+import { ConfirmEmail } from "src/modules/confirm-email/confirm-email.screen"
 
 const Stack = createStackNavigator()
 
@@ -27,6 +28,7 @@ const Root = memo(() => {
       <Stack.Navigator initialRouteName={Route.Home}>
         <Stack.Screen name={Route.Home} component={Home} />
         <Stack.Screen name={Route.SignUp} component={SignUp} />
+        <Stack.Screen name={Route.ConfirmEmail} component={ConfirmEmail} />
       </Stack.Navigator>
     </NavigationContainer>
   )
