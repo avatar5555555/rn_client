@@ -1,6 +1,6 @@
 import React from "react"
 import { useField } from "formik"
-import { TextInput, View, Text } from "react-native"
+import { TextInput, View, Text, TextInputProps } from "react-native"
 import { useIntl } from "react-intl"
 
 import { border } from "./theme/border"
@@ -13,7 +13,7 @@ type FieldProps = {
   label: string
   children?: React.ReactNode
   isBackgroundDark?: boolean
-}
+} & TextInputProps
 
 const Input = styled(TextInput)`
   background-color: ${({ theme }) => theme.colors.white};
@@ -55,6 +55,7 @@ export const TextField = ({
   label,
   children,
   isBackgroundDark,
+  ...rest
 }: FieldProps) => {
   const [field, meta] = useField(name)
   const intl = useIntl()
@@ -73,6 +74,7 @@ export const TextField = ({
         onBlur={field.onBlur(name)}
         onChangeText={field.onChange(name)}
         value={field.value}
+        {...rest}
       />
 
       <ErrorLabel>
