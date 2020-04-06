@@ -1,5 +1,29 @@
 [
   {
+    "id": "confirmEmail.title",
+    "defaultMessage": "Confirm email"
+  },
+  {
+    "id": "confirmEmail.codeLabel",
+    "defaultMessage": "Code"
+  },
+  {
+    "id": "confirmEmail.emailLabel",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "confirmEmail.confirmButtonLabel",
+    "defaultMessage": "Confirm"
+  },
+  {
+    "id": "confirmEmail.sendNewCodeButtonLabel",
+    "defaultMessage": "Send New Code"
+  },
+  {
+    "id": "confirmEmail.invalidCode",
+    "defaultMessage": "Invalid Code"
+  },
+  {
     "id": "signUp.title",
     "defaultMessage": "Sign up"
   },
@@ -20,6 +44,10 @@
     "defaultMessage": "Long password"
   },
   {
+    "id": "signUp.emailAlreadyExists",
+    "defaultMessage": "Email already exists"
+  },
+  {
     "id": "sharedErrors.required",
     "defaultMessage": "Required"
   },
@@ -28,11 +56,7 @@
     "defaultMessage": "Invalid"
   },
   {
-    "id": "f",
-    "defaultMessage": "aa"
-  },
-  {
-    "id": "ff",
-    "defaultMessage": "s"
+    "id": "sharedErrors.errorTitle",
+    "defaultMessage": "Oops!"
   }
 ]
