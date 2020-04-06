@@ -1,12 +1,13 @@
 import gql from "graphql-tag"
 
 export const SignUp = gql`
-  mutation register($email: String!, $password: String!) {
-    register(email: $email, password: $password) {
+  mutation signUp($email: String!, $password: String!) {
+    signUp(email: $email, password: $password) {
       user {
         id
+        email
+        emailVerified
       }
-      token
     }
   }
 `
