@@ -1,11 +1,5 @@
 import React from "react"
-import {
-  SafeAreaView,
-  ImageBackground,
-  StyleProp,
-  ImageStyle,
-  View,
-} from "react-native"
+import { SafeAreaView, View } from "react-native"
 import { useIntl } from "react-intl"
 import { FormikProps } from "formik"
 
@@ -17,7 +11,7 @@ import { TextField } from "src/ui/text-field"
 import { Title } from "src/ui/title"
 import { Button } from "src/ui/button"
 import { Overlay } from "src/ui/overlay"
-import { deviceWidth, deviceHeight } from "src/config"
+import { ImageBackgroundRoot } from "src/ui/image-background-root"
 
 const TitleBox = styled(View)`
   margin-top: ${scale(20)}px;
@@ -27,31 +21,12 @@ const InputBox = styled(View)`
   margin-top: ${scale(100)}px;
 `
 
-const Root = styled(ImageBackground)`
-  flex-basis: 100%;
-  padding-right: ${scale(16)}px;
-  padding-left: ${scale(16)}px;
-  position: relative;
-`
-
-const backgroundImage: StyleProp<ImageStyle> = {
-  position: "absolute",
-  flex: 1,
-  backgroundColor: "rgba(0,0,0,0.45)",
-  width: deviceWidth,
-  height: deviceHeight,
-}
-
 export const SignUpForm = (props: FormikProps<SignUpFormValues>) => {
   const intl = useIntl()
 
   return (
     <SafeAreaView>
-      <Root
-        source={require("src/images/sign-up-bg.png")}
-        resizeMethod="resize"
-        imageStyle={backgroundImage}
-      >
+      <ImageBackgroundRoot source={require("src/images/sign-up-bg.png")}>
         <Overlay />
 
         <TitleBox>
@@ -63,12 +38,17 @@ export const SignUpForm = (props: FormikProps<SignUpFormValues>) => {
             isBackgroundDark
             name={SignUpField.Email}
             label={intl.formatMessage(i18n.emailLabel)}
+            autoCapitalize="none"
+            autoCompleteType="email"
+            textContentType="emailAddress"
           />
 
           <TextField
             isBackgroundDark
             name={SignUpField.Password}
             label={intl.formatMessage(i18n.passwordLabel)}
+            textContentType="newPassword"
+            autoCompleteType="off"
           />
 
           <Button
@@ -78,7 +58,7 @@ export const SignUpForm = (props: FormikProps<SignUpFormValues>) => {
             label={intl.formatMessage(i18n.title)}
           />
         </InputBox>
-      </Root>
+      </ImageBackgroundRoot>
     </SafeAreaView>
   )
 }
