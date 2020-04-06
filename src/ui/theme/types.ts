@@ -1,0 +1,11 @@
+export type Colors =
+  | "transparent"
+  | "white"
+  | "black"
+  | "primary"
+  | "secondary"
+  | "bg"
+  | "grayLight"
+  | "gray"
+  | "grayDark"
+  | "inputColor"
