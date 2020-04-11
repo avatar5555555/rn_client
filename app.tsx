@@ -5,6 +5,7 @@ import { NavigationContainer } from "@react-navigation/native"
 import { createStackNavigator } from "@react-navigation/stack"
 import { ApolloProvider } from "@apollo/react-hooks"
 
+import { SignIn } from "src/modules/sign-in/sign-in.screen"
 import { client } from "src/services/apollo-client"
 import { Home } from "src/modules/home/home.screen"
 import { SignUp } from "src/modules/sign-up/sign-up.screen"
@@ -27,6 +28,7 @@ const Root = memo(() => {
     <NavigationContainer>
       <Stack.Navigator initialRouteName={Route.Home}>
         <Stack.Screen name={Route.Home} component={Home} />
+        <Stack.Screen name={Route.SignIn} component={SignIn} />
         <Stack.Screen name={Route.SignUp} component={SignUp} />
         <Stack.Screen name={Route.ConfirmEmail} component={ConfirmEmail} />
       </Stack.Navigator>

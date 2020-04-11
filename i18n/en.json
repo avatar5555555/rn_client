@@ -24,6 +24,26 @@
     "defaultMessage": "Invalid Code"
   },
   {
+    "id": "signIn.title",
+    "defaultMessage": "Sign up"
+  },
+  {
+    "id": "signIn.passwordLabel",
+    "defaultMessage": "Password"
+  },
+  {
+    "id": "signIn.emailLabel",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "signIn.invalidCredentials",
+    "defaultMessage": "Invalid Credentials"
+  },
+  {
+    "id": "signIn.confirmEmail",
+    "defaultMessage": "Confirm email, please"
+  },
+  {
     "id": "signUp.title",
     "defaultMessage": "Sign up"
   },
