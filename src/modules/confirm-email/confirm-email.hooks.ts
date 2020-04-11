@@ -22,17 +22,14 @@ export const useSubmit = () => {
       formikHelpers: FormikHelpers<ConfirmEmailFormValues>,
     ) => {
       try {
-        const { data, errors } = await handleConfirm({ variables: values })
+        const { data } = await handleConfirm({ variables: values })
         const token = data?.confirmEmail?.token
-
-        console.log(errors)
 
         if (token) {
           await authStorage.setToken(token)
           navigation.navigate(Route.Home)
         }
       } catch (error) {
-        console.log(error)
         Alert.alert(
           intl.formatMessage(sharedErrors.errorTitle),
           intl.formatMessage(errors.invalidCode),
