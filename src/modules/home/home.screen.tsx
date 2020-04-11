@@ -33,10 +33,15 @@ export const Home = () => {
     navigation.navigate(Route.ConfirmEmail, { email: "sdsd@a.dd" })
   }, [navigation])
 
+  const handleSignIn = useCallback(async () => {
+    navigation.navigate(Route.SignIn)
+  }, [navigation])
+
   return (
     <SafeAreaView>
       <Root>
         <Text>{JSON.stringify(data)}</Text>
+        <Button onPress={handleSignIn} title="sign in" />
         <Button onPress={handleClick} title="sign up" />
         <Button onPress={handleConfirm} title="confirm email" />
         <Button onPress={handleLogout} title="log out" />

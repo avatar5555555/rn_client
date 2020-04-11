@@ -1,5 +1,5 @@
-import React from "react"
-import { SafeAreaView, View } from "react-native"
+import React, { useEffect, useRef, useCallback } from "react"
+import { SafeAreaView, View, Keyboard, Animated } from "react-native"
 import { useIntl } from "react-intl"
 import { FormikProps } from "formik"
 
@@ -18,10 +18,6 @@ const TitleBox = styled(View)`
   margin-top: ${scale(20)}px;
 `
 
-const InputBox = styled(View)`
-  margin-top: ${scale(100)}px;
-`
-
 const ButtonBox = styled(View)`
   margin-top: ${scale(20)}px;
 `
@@ -31,6 +27,40 @@ export const ConfirmEmailForm = (
 ) => {
   const intl = useIntl()
   const [isLoading, handleSendNewCode] = useSendNewCode()
+  const formAnimation = useRef(new Animated.Value(scale(100))).current
+
+  const keyboardIn = useCallback(() => {
+    Animated.timing(formAnimation, {
+      useNativeDriver: true,
+      toValue: scale(20),
+      duration: 150,
+    }).start()
+  }, [formAnimation])
+
+  const keyboardOut = useCallback(() => {
+    Animated.timing(formAnimation, {
+      useNativeDriver: true,
+      toValue: scale(100),
+      duration: 150,
+    }).start()
+  }, [formAnimation])
+
+  useEffect(() => {
+    const keyboardDidShowListener = Keyboard.addListener(
+      "keyboardDidShow",
+      keyboardIn,
+    )
+
+    const keyboardDidHideListener = Keyboard.addListener(
+      "keyboardDidHide",
+      keyboardOut,
+    )
+
+    return () => {
+      keyboardDidHideListener.remove()
+      keyboardDidShowListener.remove()
+    }
+  }, [keyboardIn, keyboardOut])
 
   return (
     <SafeAreaView>
@@ -41,7 +71,7 @@ export const ConfirmEmailForm = (
           <Title isBackgroundDark>{intl.formatMessage(i18n.title)}</Title>
         </TitleBox>
 
-        <InputBox>
+        <Animated.View style={[{ transform: [{ translateY: formAnimation }] }]}>
           <TextField
             isBackgroundDark
             name={ConfirmEmailField.Email}
@@ -71,7 +101,7 @@ export const ConfirmEmailForm = (
               label={intl.formatMessage(i18n.confirmButtonLabel)}
             />
           </ButtonBox>
-        </InputBox>
+        </Animated.View>
       </ImageBackgroundRoot>
     </SafeAreaView>
   )
