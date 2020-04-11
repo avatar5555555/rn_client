@@ -32,6 +32,7 @@ export const useSubmit = () => {
           navigation.navigate(Route.Home)
         }
       } catch (error) {
+        console.log(error)
         Alert.alert(
           intl.formatMessage(sharedErrors.errorTitle),
           intl.formatMessage(errors.invalidCode),
