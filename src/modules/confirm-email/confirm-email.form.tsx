@@ -27,12 +27,12 @@ export const ConfirmEmailForm = (
 ) => {
   const intl = useIntl()
   const [isLoading, handleSendNewCode] = useSendNewCode()
-  const formAnimation = useRef(new Animated.Value(100)).current
+  const formAnimation = useRef(new Animated.Value(scale(100))).current
 
   const keyboardIn = useCallback(() => {
     Animated.timing(formAnimation, {
       useNativeDriver: true,
-      toValue: 20,
+      toValue: scale(20),
       duration: 150,
     }).start()
   }, [formAnimation])
@@ -40,7 +40,7 @@ export const ConfirmEmailForm = (
   const keyboardOut = useCallback(() => {
     Animated.timing(formAnimation, {
       useNativeDriver: true,
-      toValue: 100,
+      toValue: scale(100),
       duration: 150,
     }).start()
   }, [formAnimation])
@@ -71,17 +71,7 @@ export const ConfirmEmailForm = (
           <Title isBackgroundDark>{intl.formatMessage(i18n.title)}</Title>
         </TitleBox>
 
-        <Animated.View
-          style={[
-            {
-              transform: [
-                {
-                  translateY: formAnimation,
-                },
-              ],
-            },
-          ]}
-        >
+        <Animated.View style={[{ transform: [{ translateY: formAnimation }] }]}>
           <TextField
             isBackgroundDark
             name={ConfirmEmailField.Email}
