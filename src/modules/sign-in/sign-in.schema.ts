@@ -19,8 +19,8 @@ export const i18n = defineMessages({
     defaultMessage: "Email",
   },
   buttonLabel: {
-    id: "signIn.emailLabel",
-    defaultMessage: "Email",
+    id: "signIn.buttonLabel",
+    defaultMessage: "Sign In",
   },
 })
 
