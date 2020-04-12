@@ -55,7 +55,7 @@ export const SignUpForm = (props: FormikProps<SignUpFormValues>) => {
             loading={props.isSubmitting}
             onPress={props.handleSubmit}
             disabled={props.isSubmitting}
-            label={intl.formatMessage(i18n.title)}
+            label={intl.formatMessage(i18n.buttonLabel)}
           />
         </InputBox>
       </ImageBackgroundRoot>

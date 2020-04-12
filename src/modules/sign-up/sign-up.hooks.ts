@@ -2,7 +2,6 @@ import { useCallback } from "react"
 import { useNavigation } from "@react-navigation/native"
 import { Alert } from "react-native"
 import { useIntl } from "react-intl"
-import { FormikHelpers } from "formik"
 
 import { SignUpFormValues, errors } from "./sign-up.schema"
 
@@ -16,10 +15,7 @@ export const useSubmit = () => {
   const navigation = useNavigation()
 
   return useCallback(
-    async (
-      values: SignUpFormValues,
-      formikHelpers: FormikHelpers<SignUpFormValues>,
-    ) => {
+    async (values: SignUpFormValues) => {
       try {
         await handleRegistration({ variables: values })
 
@@ -29,7 +25,6 @@ export const useSubmit = () => {
           intl.formatMessage(sharedErrors.errorTitle),
           intl.formatMessage(errors.emailAlreadyExists),
         )
-        formikHelpers.resetForm()
       }
     },
     [handleRegistration, intl, navigation],
