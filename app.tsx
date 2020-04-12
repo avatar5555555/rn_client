@@ -14,6 +14,8 @@ import { useMeQuery } from "src/types"
 import { IntlService } from "src/services/intl"
 import { ThemeProvider, theme } from "src/ui/theme"
 import { ConfirmEmail } from "src/modules/confirm-email/confirm-email.screen"
+import { ResetPassword } from "src/modules/reset-password/reset-password.screen"
+import { ConfirmNewPassword } from "src/modules/confirm-new-password/confirm-new-password.screen"
 
 const Stack = createStackNavigator()
 
@@ -31,6 +33,11 @@ const Root = memo(() => {
         <Stack.Screen name={Route.SignIn} component={SignIn} />
         <Stack.Screen name={Route.SignUp} component={SignUp} />
         <Stack.Screen name={Route.ConfirmEmail} component={ConfirmEmail} />
+        <Stack.Screen name={Route.ResetPassword} component={ResetPassword} />
+        <Stack.Screen
+          name={Route.ConfirmNewPassword}
+          component={ConfirmNewPassword}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   )

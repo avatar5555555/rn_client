@@ -40,6 +40,7 @@ const Label = styled(Text)`
 
 const LabelRoot = styled(View)`
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
 `
 

@@ -3,8 +3,8 @@ import { SafeAreaView, View } from "react-native"
 import { useIntl } from "react-intl"
 import { FormikProps } from "formik"
 
-import { i18n, SignUpFormValues } from "./sign-up.schema"
-import { SignUpField } from "./sign-up.types"
+import { i18n, SignUpFormValues } from "./reset-password.schema"
+import { ResetPasswordField } from "./reset-password.types"
 
 import styled, { scale } from "src/ui/theme"
 import { TextField } from "src/ui/text-field"
@@ -21,12 +21,12 @@ const InputBox = styled(View)`
   margin-top: ${scale(100)}px;
 `
 
-export const SignUpForm = (props: FormikProps<SignUpFormValues>) => {
+export const ResetPasswordForm = (props: FormikProps<SignUpFormValues>) => {
   const intl = useIntl()
 
   return (
     <SafeAreaView>
-      <ImageBackgroundRoot source={require("src/images/sign-up-bg.png")}>
+      <ImageBackgroundRoot source={require("src/images/reset-password-bg.png")}>
         <Overlay />
 
         <TitleBox>
@@ -36,26 +36,18 @@ export const SignUpForm = (props: FormikProps<SignUpFormValues>) => {
         <InputBox>
           <TextField
             isBackgroundDark
-            name={SignUpField.Email}
+            name={ResetPasswordField.Email}
             label={intl.formatMessage(i18n.emailLabel)}
             autoCapitalize="none"
             autoCompleteType="email"
             textContentType="emailAddress"
           />
 
-          <TextField
-            isBackgroundDark
-            name={SignUpField.Password}
-            label={intl.formatMessage(i18n.passwordLabel)}
-            textContentType="newPassword"
-            autoCompleteType="off"
-          />
-
           <Button
             loading={props.isSubmitting}
             onPress={props.handleSubmit}
             disabled={props.isSubmitting}
-            label={intl.formatMessage(i18n.buttonLabel)}
+            label={intl.formatMessage(i18n.title)}
           />
         </InputBox>
       </ImageBackgroundRoot>

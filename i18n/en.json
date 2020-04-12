@@ -24,8 +24,60 @@
     "defaultMessage": "Invalid Code"
   },
   {
+    "id": "confirmNewPassword.title",
+    "defaultMessage": "Confirm New Password"
+  },
+  {
+    "id": "confirmNewPassword.codeLabel",
+    "defaultMessage": "Code"
+  },
+  {
+    "id": "confirmNewPassword.emailLabel",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "confirmNewPassword.passwordLabel",
+    "defaultMessage": "New Password"
+  },
+  {
+    "id": "confirmNewPassword.confirmButtonLabel",
+    "defaultMessage": "Confirm"
+  },
+  {
+    "id": "confirmNewPassword.sendNewCodeButtonLabel",
+    "defaultMessage": "Send New Code"
+  },
+  {
+    "id": "confirmNewPassword.invalidCode",
+    "defaultMessage": "Invalid Code"
+  },
+  {
+    "id": "confirmNewPassword.shortPassword",
+    "defaultMessage": "Short password"
+  },
+  {
+    "id": "confirmNewPassword.longPassword",
+    "defaultMessage": "Long password"
+  },
+  {
+    "id": "resetPassword.title",
+    "defaultMessage": "Reset Password"
+  },
+  {
+    "id": "resetPassword.emailLabel",
+    "defaultMessage": "Email"
+  },
+  {
+    "id": "resetPassword.buttonLabel",
+    "defaultMessage": "Send Code"
+  },
+  {
+    "id": "resetPassword.emailDoesNotExist",
+    "defaultMessage": "Email doesn't exist"
+  },
+  {
     "id": "signIn.title",
-    "defaultMessage": "Sign up"
+    "defaultMessage": "Sign in"
   },
   {
     "id": "signIn.passwordLabel",
@@ -34,6 +86,22 @@
   {
     "id": "signIn.emailLabel",
     "defaultMessage": "Email"
+  },
+  {
+    "id": "signIn.buttonLabel",
+    "defaultMessage": "Sign In"
+  },
+  {
+    "id": "signIn.forgotLabel",
+    "defaultMessage": "Forgot?"
+  },
+  {
+    "id": "signIn.notAMemberLabel",
+    "defaultMessage": "Not a member?"
+  },
+  {
+    "id": "signIn.signUp",
+    "defaultMessage": "Sign Up"
   },
   {
     "id": "signIn.invalidCredentials",
@@ -54,6 +122,10 @@
   {
     "id": "signUp.emailLabel",
     "defaultMessage": "Email"
+  },
+  {
+    "id": "signUp.buttonLabel",
+    "defaultMessage": "Sign Up"
   },
   {
     "id": "signUp.shortPassword",

@@ -3,4 +3,6 @@ export enum Route {
   SignUp = "SignUp",
   SignIn = "SignIn",
   ConfirmEmail = "ConfirmEmail",
+  ResetPassword = "ResetPassword",
+  ConfirmNewPassword = "ConfirmNewPassword",
 }

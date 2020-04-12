@@ -20,8 +20,8 @@ export const i18n = defineMessages({
     defaultMessage: "Email",
   },
   buttonLabel: {
-    id: "signUp.emailLabel",
-    defaultMessage: "Email",
+    id: "signUp.buttonLabel",
+    defaultMessage: "Sign Up",
   },
 })
 
@@ -48,7 +48,7 @@ export const schema = yup.object({
   [SignUpField.Password]: yup
     .string()
     .min(minPasswordLength, errors.shortPassword.id)
-    .max(maxPasswordLength, errors.shortPassword.id)
+    .max(maxPasswordLength, errors.longPassword.id)
     .required(sharedErrors.required.id),
 })
 

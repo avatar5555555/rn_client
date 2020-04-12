@@ -8,7 +8,7 @@ import { sharedErrors } from "src/shared-schema"
 export const i18n = defineMessages({
   title: {
     id: "signIn.title",
-    defaultMessage: "Sign up",
+    defaultMessage: "Sign in",
   },
   passwordLabel: {
     id: "signIn.passwordLabel",
@@ -19,8 +19,20 @@ export const i18n = defineMessages({
     defaultMessage: "Email",
   },
   buttonLabel: {
-    id: "signIn.emailLabel",
-    defaultMessage: "Email",
+    id: "signIn.buttonLabel",
+    defaultMessage: "Sign In",
+  },
+  forgotLabel: {
+    id: "signIn.forgotLabel",
+    defaultMessage: "Forgot?",
+  },
+  notAMemberLabel: {
+    id: "signIn.notAMemberLabel",
+    defaultMessage: "Not a member?",
+  },
+  signUp: {
+    id: "signIn.signUp",
+    defaultMessage: "Sign Up",
   },
 })
 

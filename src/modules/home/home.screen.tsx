@@ -37,6 +37,14 @@ export const Home = () => {
     navigation.navigate(Route.SignIn)
   }, [navigation])
 
+  const handleConfirmNewPassword = useCallback(async () => {
+    navigation.navigate(Route.ConfirmNewPassword, { email: "sdsd@a.dd" })
+  }, [navigation])
+
+  const handleResetPassword = useCallback(async () => {
+    navigation.navigate(Route.ResetPassword)
+  }, [navigation])
+
   return (
     <SafeAreaView>
       <Root>
@@ -45,6 +53,11 @@ export const Home = () => {
         <Button onPress={handleClick} title="sign up" />
         <Button onPress={handleConfirm} title="confirm email" />
         <Button onPress={handleLogout} title="log out" />
+        <Button
+          onPress={handleConfirmNewPassword}
+          title="confirm new password"
+        />
+        <Button onPress={handleResetPassword} title="reset password" />
       </Root>
     </SafeAreaView>
   )
