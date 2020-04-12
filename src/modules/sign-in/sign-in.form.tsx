@@ -47,15 +47,15 @@ export const SignInForm = (props: FormikProps<SignInFormValues>) => {
             isBackgroundDark
             name={SignInField.Password}
             label={intl.formatMessage(i18n.passwordLabel)}
-            textContentType="newPassword"
-            autoCompleteType="off"
+            textContentType="password"
+            autoCompleteType="password"
           />
 
           <Button
             loading={props.isSubmitting}
             onPress={props.handleSubmit}
             disabled={props.isSubmitting}
-            label={intl.formatMessage(i18n.title)}
+            label={intl.formatMessage(i18n.buttonLabel)}
           />
         </InputBox>
       </ImageBackgroundRoot>
